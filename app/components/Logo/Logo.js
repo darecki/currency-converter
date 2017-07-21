@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { View, Text, Keyboard, Animated, Platform } from 'react-native';
+import PropTypes from 'prop-types';
 
 import styles from './styles';
 
