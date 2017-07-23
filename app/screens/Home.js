@@ -9,6 +9,8 @@ import { ClearButton } from '../components/Button';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 
+import { changeCurrencyAmount, swapCurrency } from '../actions/currencies';
+
 const TEMP_BASE_CURRENCY = 'USD';
 const TEMP_QUOTE_CURRENCY = 'GBP';
 const TEMP_BASE_PRICE = '100';
@@ -21,8 +23,9 @@ class Home extends Component {
     navigation: PropTypes.object,
   };
 
-  handleChangeText = () => {
-    console.log('change text');
+  handleChangeText = (text) => {
+    // TODO: Dispatch this action to redux
+    console.log(changeCurrencyAmount(text));
   };
 
   handlePressBaseCurrency = () => {
@@ -34,15 +37,12 @@ class Home extends Component {
   };
 
   handleSwapCurrency = () => {
-    console.log('handle swap currency');
-  };
-
-  handleSwapCurrency = () => {
-    console.log('handle swap currency');
+    // TODO: Dispatch this action to redux
+    console.log(swapCurrency());
   };
 
   handleOptionsPress = () => {
-    this.props.navigation.navigate('Options', { title: 'Options' });
+    this.props.navigation.navigate('Options');
   };
 
   render() {
