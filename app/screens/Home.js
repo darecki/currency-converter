@@ -42,7 +42,7 @@ class Home extends Component {
   };
 
   handleOptionsPress = () => {
-    this.props.navigation.navigate('Options');
+    this.props.navigation.navigate('Options', { title: 'Options' });
   };
 
   render() {
